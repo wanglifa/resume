@@ -46,6 +46,10 @@ body{
     z-index: 100;
     margin-bottom: 40px;
     transition: all .3s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .topNavBar.static{
     position: fixed;
@@ -64,11 +68,11 @@ body{
     padding: 4px 0 4px 15px;
     font-weight: 600;
 }
-.topNavBar .logo,nav li{
+nav li{
     float: left;
 }
 .topNavBar .logo .rs{
-    color: #e6686a;
+    color: rgb(117, 151, 247);
     margin-right: 4px;
 }
 .topNavBar .logo .card{
@@ -76,7 +80,7 @@ body{
 }
   
 .topNavBar nav{
-    float: right;
+    
 }
 .topNavBar nav>ul>li{
     margin: 0 17px;
@@ -99,7 +103,7 @@ body{
     display: block;
     width: 0;
     height: 3px;
-    background: #DC6465;
+    background: rgb(117, 151, 247);
     position: absolute;
     top: 100%;
     transition: all .3s linear;
@@ -161,8 +165,14 @@ body{
     background-color: #fff;
     padding: 57px 50px 15px 50px;
 }
+.colum-list{
+    display: flex;
+}
+.list-r{
+    margin-left: auto;
+}
 .welcome{
-    background-color: #e8676b;
+    background-color: rgb(117, 151, 247);
     color: #fff;
     padding: 5px 15px;
     line-height: 21px;
@@ -171,7 +181,7 @@ body{
     margin-bottom: 20px;
 }
 .welcome .triangle{
-    border: 6px solid #e8676b;
+    border: 6px solid rgb(117, 151, 247);
     width: 0;
     height: 0; 
     border-bottom-color: transparent;
@@ -190,11 +200,11 @@ body{
     margin-left: 50px;
     width: 490px;
 }
-.welcome+h1{
+.list-l h1{
     margin-bottom: 6px;
     color: #333;
 }
-.welcome+h1+p+hr{
+.colum-list+hr{
     border: 0;
     border-top: 1px solid #dedede;
     margin-top: 25px;
@@ -217,7 +227,7 @@ body{
     color: #999;
 }
 .media{
-    background-color: #e8676b;
+    background-color: rgb(117, 151, 247);
     text-align: center;
     padding: 15px 0;
 }
@@ -233,7 +243,7 @@ body{
 }
 .media a:hover{
     border-radius: 50%;
-    background-color: rgba(208,92,96,1);
+    background-color: rgba(62, 98, 197, 1);
 }
 .button{
     padding: 21px 55px;
@@ -250,11 +260,11 @@ body{
 .userCard+p{
     margin: 30px auto 25px;
 }
-.userCard+p > a{
+.list-r > a{
     transition: all .3s linear;
     cursor: pointer;
 }
-.userCard+p > a:hover{
+.list-r > a:hover{
     -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
     -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
@@ -278,16 +288,18 @@ section>h2{
 }
 
 section.skills,
-section.portfolio{ max-width: 940px; margin-left: auto; margin-right: auto; margin-top: 60px; }
+section.portfolio{ max-width: 1200px; margin-left: auto; margin-right: auto; margin-top: 60px; }
 section.skills > h2 ,
 section.portfolio > h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; }
 section.skills h3 { font-size: 14px; line-height: 1.1; padding-right: 40px; }
-section.skills > ol { background: white; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5); padding: 42px 50px 10px; margin-top: 30px; }
-section.skills > ol > li { float: left; width: 48%; box-sizing: border-box; }
+/* section.skills > ol { box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5); padding: 42px 50px 10px; margin-top: 30px; } */
+
+section.skills > ol > li { float: left; width: 33.33333%; box-sizing: border-box; padding: 0 15px; margin-bottom: 30px;}
+section.skills > ol > li>.list{ background: white;}
 section.skills > ol > li:nth-child(even) { float: right; } 
 section.skills .progressBar { height: 5px; background: #FAE1E1; 
 border-radius: 2px; margin: 4px 0 40px; overflow: hidden; }
-section.skills .progressBar > .progress { height: 100%; background: #E6686A; 
+section.skills .progressBar > .progress { height: 100%; background: rgb(117, 151, 247); 
 width: 70%; border-radius: 2px; transform: translateX(0); transition: all 1s; }
 section.skills.offset .progress{
   transform: translateX(-100%);
@@ -321,7 +333,7 @@ section.portfolio >nav li:first-child{
 }
 .portfolio .bar-inner{
     height: 100%;
-    background: #e6686a;
+    background: rgb(117, 151, 247);
     width: 10%;
     border-radius: 2px;
     transition: all .3s linear;
@@ -371,7 +383,7 @@ section.portfolio >nav li:first-child{
     height: 16px;
 }
 .swiper-pagination-bullet-active{
-    background-color: #e6686a;
+    background-color: rgb(117, 151, 247);
     opacity: 1;
 }
 
